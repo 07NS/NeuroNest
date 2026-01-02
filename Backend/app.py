@@ -13,3 +13,10 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(port=3000, debug=True)
+
+@app.route("/")
+def home():
+    return {
+        "status": "NeuroNest backend is running",
+        "message": "Use /analyze endpoint for screening"
+    }
