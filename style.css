@@ -188,3 +188,85 @@
   font-size: 0.85rem;
   color: #666;
 }
+
+/* ---------- GLOBAL FIX ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: auto;
+}
+
+/* ---------- TEXT SCALING ---------- */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 40px 16px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .hero {
+    gap: 30px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
