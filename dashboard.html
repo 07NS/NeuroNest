@@ -34,6 +34,14 @@
 
 
 <script>
+  const result = JSON.parse(
+  localStorage.getItem("screeningResult")
+);
+
+if (!result) {
+  window.location.href = "screening.html";
+}
+
   // Fetch stored screening result
   const rawData = localStorage.getItem("screeningResult");
 
