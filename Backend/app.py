@@ -159,6 +159,10 @@ def chat():
         if not text:
             print("UNEXPECTED MODEL RESPONSE SHAPE:", response)
             return jsonify({"reply": "Received unexpected response from model. Check server logs."}), 500
+        response = client.models.generate_content(
+            model="models/gemini-2.5-flash",
+            contents=f"{LEISURE_AI_PROMPT}\n\nUser: {user_message}\nAssistant:"
+        )
 
         print("CHAT RESPONSE:", text)
         return jsonify({"reply": text})
