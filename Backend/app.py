@@ -100,7 +100,7 @@ def chat():
             })
 
         response = client.models.generate_content(
-            model="models/gemini-pro",
+            model="models/gemini-2.5-flash",
             contents=f"{LEISURE_AI_PROMPT}\n\nUser: {user_message}\nAssistant:"
         )
 
